@@ -213,12 +213,24 @@
             $("#time").html("経過時間： " + etime);
             $("#remain").html("残り時間： " + rest);
             analog(rest);
+
+            updateBackground();
             }
         
         if (rest<=0){
             active=false;
             alarm();
         }
+
+        function updateBackground() {
+      if (rest > 30) {
+        $('body').css('background-color', 'skyblue');
+      } else if (rest > 10) {
+        $('body').css('background-color', 'lightyellow');
+      } else {
+        $('body').css('background-color', 'lightcoral');
+      }
+    }
 
     } 
 
