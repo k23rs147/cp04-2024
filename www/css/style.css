@@ -63,6 +63,13 @@
         position:absolute; top:380px; left:70%; width:28%; height:60px; 
         background-color:red; 
     }
+
+    #btnR {
+        font-size: 20px;
+        position:absolute; top:500px; left:25%; width:43%; height:60px;
+        background-color:aqua; 
+        color: rgb(238, 12, 54);
+    }
     
     #minute {
         font-size: 30px;

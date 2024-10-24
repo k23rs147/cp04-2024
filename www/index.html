@@ -38,6 +38,10 @@
         $('#btnC').click(function(e) {
             btnCClick(e);
         });
+
+        $('#btnR').click(function(e) {
+            btnRClick(e);
+        });
         init();
     });
     
@@ -163,6 +167,7 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         $('#btnC').prop('disabled', false);
+        $('#btnR').prop('disabled', false);
         
     }
 
@@ -203,6 +208,15 @@
         $("#remain").html("残り時間： " + period);
         
     }
+
+    // ButtonRがクリックされた時の処理
+    function btnRClick(e) {
+    period = 60 * parseInt($("#minute").val()) + parseInt($("#second").val());
+    startTime = new Date();
+    active = true; // タイマーを再開
+    $("#time").html("経過時間： 0");
+    $("#remain").html("残り時間： " + period);
+}
     
  
     // 繰り返し実行する処理
@@ -246,7 +260,8 @@
     <div id="time">Time</div>
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
-    <button id="btnC">Set</button>  
+    <button id="btnC">Set</button>
+    <button id="btnR">Restart</button>  
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=40 >
 </body>
