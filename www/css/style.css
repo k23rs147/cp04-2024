@@ -66,9 +66,16 @@
 
     #btnR {
         font-size: 20px;
-        position:absolute; top:500px; left:25%; width:43%; height:60px;
+        position:absolute; top:500px; left:10%; width:40%; height:60px;
         background-color:aqua; 
         color: rgb(238, 12, 54);
+    }
+
+    #btnP {
+        font-size: 20px;
+        position:absolute; top:500px; left:50%; width:40%; height:60px;
+        background-color:rgb(74, 196, 26); 
+        color: silver;
     }
     
     #minute {
